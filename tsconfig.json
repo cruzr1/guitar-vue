@@ -1,0 +1,21 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "composite": true,
+    "isolatedModules": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
+}

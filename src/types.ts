@@ -23,3 +23,32 @@ export type GuitarType = {
 export type SortOrderType = 'asc' | 'desc';
 
 export type SortOrderFieldType = 'price' | 'createdAt';
+
+export type EntitiesWithPagination<T> = {
+  entities: T[];
+  totalPages: number;
+  currentPage: number;
+}
+
+export type GuitarsQuery = {
+  type?: GuitarCategoryType[];
+  stringsCount?: StringsCountType[];
+  page?: number;
+  sortByField?: SortOrderFieldType;
+  sortByOrder?: "asc" | "desc";
+}
+
+export type AuthStatusType = 'auth' | 'unauth' | 'unknown';
+
+export type UserType = {
+  name: string;
+  email: string;
+}
+
+export type LoginType = Pick<UserType, 'email'> & Record<'password', string>;
+
+  export type SigninType = UserType & Record<'password', string>;
+
+  export type LoggedUserType = {
+    accessToken: string;
+  }
